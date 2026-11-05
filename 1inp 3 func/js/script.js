@@ -35,11 +35,11 @@ palindromeBtn.addEventListener("click", function(){
     output.textContent = '';
     const input = document.getElementById("input").value.toLowerCase().replaceAll(" ","");
     const reversed = input.split('').reverse().join("");
-    for(let i = 0; i < input.length; i++){
-        if(input === reversed){
-            output.textContent = `this input is a palindrome`;
-        }   else {
-            output.textContent = `this input is not a palindrome`;
-        }
+
+    if(input === reversed){
+        output.textContent = `this input is a palindrome`;
+    }   else {
+        output.textContent = `this input is not a palindrome`;
     }
+
 })
